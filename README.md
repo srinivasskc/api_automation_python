@@ -19,7 +19,6 @@ Uses Flask, Connexion, Swagger and SQL Alchemy
   definitions of all required dependencies.
 - Execute `pipenv shell` to activate the virtualenv in your terminal
 - Execute `pipenv install` to install all dependencies
-- cd to `people-api`
 - Execute `python server.py`
 - To open swagger navigate to `http://0.0.0.0:5000/api/ui/`
 
@@ -29,6 +28,8 @@ Uses Flask, Connexion, Swagger and SQL Alchemy
 
 - `server.py` has the code to start the Flask app with connexion
 - `people.py` has the implementation for CRUD operations of the people API
+- `models.py` has the SQLAlchemy database models
+- `build_database.py` has the script to initialize the database
 - `swagger.yml` has the swagger spec to define the route for the API while also allowing to build
   out a nice swagger documentation
 - `static` dir contains the `css` and `js` files (following MVC) which define the presentation and
