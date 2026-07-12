@@ -26,14 +26,44 @@ Uses Flask, Connexion, Swagger and SQL Alchemy
 
 ## Project structure
 
-- `server.py` has the code to start the Flask app with connexion
-- `people.py` has the implementation for CRUD operations of the people API
-- `models.py` has the SQLAlchemy database models
-- `build_database.py` has the script to initialize the database
-- `swagger.yml` has the swagger spec to define the route for the API while also allowing to build
-  out a nice swagger documentation
-- `static` dir contains the `css` and `js` files (following MVC) which define the presentation and
-  the interactions with the web apps API
+- `server.py` - Entry point to start the Flask app with Connexion
+- `config.py` - Flask app configuration and database setup
+- `people.py` - CRUD operations for the People API
+- `models.py` - SQLAlchemy database models
+- `build_database.py` - Script to initialize the database
+- `swagger.yml` - Swagger spec defining API routes and documentation
+- `users/` - User-related services and constants
+- `covid_tracker/` - COVID tracking functionality
+- `static/` - CSS and JS files for the web UI
+- `templates/` - HTML templates
+- `postman/` - Postman collections for API testing
+- `tests/` - Unit and integration tests
+
+## Tests
+
+This project includes unit and integration tests.
+
+### Running Tests
+
+```bash
+# Run all tests with pytest
+pytest
+
+# Run specific test file
+pytest tests/test_mock_server.py
+```
+
+### Test Structure
+
+- `tests/test_mock_server.py` - Unit tests with mock server for testing the People API
+- `tests/fakerestapi/` - Integration tests using FakeRestAPI
+  - `GetActivities.py` - GET activities
+  - `GetActivitiesById.py` - GET activity by ID
+  - `PostActivities.py` - POST new activity
+  - `PutActivitiesById.py` - PUT update activity
+- `tests/gorestapi/` - Integration tests using GoRest API
+  - `PostUsersAuth.py` - POST user with authentication
+  - `PostUsersPassingDataFromJsonFile.py` - POST user with JSON data file
 
 ## Common Gotchas
 
