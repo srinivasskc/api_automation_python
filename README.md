@@ -203,17 +203,6 @@ pytest
 pytest tests/test_mock_server.py
 ```
 
-### Test Structure
-
-- `tests/test_mock_server.py` - Unit tests with mock server for testing the People API
-- `tests/fakerestapi/` - Integration tests using FakeRestAPI
-  - `GetActivities.py` - GET activities
-  - `GetActivitiesById.py` - GET activity by ID
-  - `PostActivities.py` - POST new activity
-  - `PutActivitiesById.py` - PUT update activity
-- `tests/gorestapi/` - Integration tests using GoRest API
-  - `PostUsersAuth.py` - POST user with authentication
-  - `PostUsersPassingDataFromJsonFile.py` - POST user with JSON data file
 
 ## Common Gotchas
 
